@@ -1,5 +1,11 @@
 import streamlit as st
 
+if st.session_state.nome:
+    st.header(f"Dados de acordo como {st.session_state.nome}")
+else:
+    st.header("Dados anonimos")
+    
+
 dicionario = {
     "Nome" : ["Rodrigo", "Hyana", "Carlos", "Matheus"],
     "Idade": [17, 22, 25, 30],
